@@ -12,7 +12,6 @@ app.engine('handlebars', exphbs({
       return (preSelection === targetSelection) ? options.fn(this) : options.inverse(this)
     }
   }
-}
 }))
 app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: true }))
