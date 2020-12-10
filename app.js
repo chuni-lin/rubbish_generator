@@ -9,11 +9,10 @@ app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   helpers: {
     ifEqual: (preSelection, targetSelection, options) => {
-      if (preSelection === targetSelection) {
-        return options.fn(this)
-      }
+      return (preSelection === targetSelection) ? options.fn(this) : options.inverse(this)
     }
   }
+}
 }))
 app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: true }))
