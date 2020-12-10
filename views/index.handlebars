@@ -1,0 +1,75 @@
+<div class="container py-5">
+
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST" action="/">
+          <h4 class="card-title text-center">你想對誰說幹話？<i class="fas fa-frown-open ml-1"></i></h4>
+          <hr>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-check">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                  class="rounded float-left img-fluid mb-1 mt-1">
+                <div class="text-center">
+                  <input class="form-check-input" type="radio" name="customRadio" id="engineer" value="engineer"
+                    {{#ifEqual options.customRadio 'engineer'}}checked{{/ifEqual}}>
+                  <label class="form-check-label" for="engineer">
+                    工程師
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-check">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                  class="rounded float-left img-fluid mb-1 mt-1">
+                <div class="text-center">
+                  <input class="form-check-input" type="radio" name="customRadio" id="designer" value="designer"
+                    {{#ifEqual options.customRadio 'designer'}}checked{{/ifEqual}}>
+                  <label class="form-check-label" for="designer">
+                    設計師
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-check">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                  class="rounded img-fluid mb-1 mt-1">
+                <div class="text-center">
+                  <input class="form-check-input" type="radio" name="customRadio" id="entrepreneur" value="entrepreneur"
+                    {{#ifEqual options.customRadio 'entrepreneur'}}checked{{/ifEqual}}>
+                  <label class="form-check-label" for="entrepreneur">
+                    創業家
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-3">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-auto">
+                <button class="btn btn-danger" type="submit">產生幹話</button>
+              </div>
+              <div class="ml-3 w-auto col-6">
+                <textarea class="form-control" name="rubbish" id="rubbish" rows="2" readonly>{{rubbish}}
+              </textarea>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <small class="card-footer text-muted text-right">
+        Idea is inspired by <a href="https://tw.alphacamp.co" target="_blank">ALPHA Camp</a>
+      </small>
+    </div>
+  </div>
+</div>
+</div>
