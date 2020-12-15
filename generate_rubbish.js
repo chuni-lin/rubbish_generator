@@ -12,7 +12,7 @@ function generateRubbish(options) {
 
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  let rubbish = []
+  let rubbish = ''
   if (options.customRadio === 'engineer') {
     rubbish =
       `身為一個工程師，${sample(task.engineer)}，${sample(phrase)}吧！`
@@ -28,7 +28,7 @@ function generateRubbish(options) {
       `身為一個創業家，${sample(task.entrepreneur)}，${sample(phrase)}吧！`
   }
 
-  if (rubbish.length === 0) {
+  if (!rubbish) {
     return '請先選擇一個想說幹話的對象！'
   }
 
